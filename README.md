@@ -43,34 +43,6 @@ Once installed you can use the JBoss BPM Suite logins:
 
 Current hosting of bpmPaaS is on JBoss BPM Suite 6.0.2 in OpenShift Online.
 
-
-Option 3 - Generate containerized installation
-----------------------------------------------
-The following steps can be used to configure and run the demo in a container
-
-1. [Download and unzip.](https://github.com/jbossdemocentral/bpms-baggage-delivery-demo/archive/master.zip)
-
-2. Add products to installs directory. For example download and add BPMS installer jar into the installs directory.
-
-3. Copy contents of support/docker directory to the project root.
-
-4. Build demo image.
-
-	```
-	docker build -t jbossdemocentral/bpms-baggage-delivery-demo .
-	```
-5. Start demo container.
-
-	```
-	docker run -it -p 8080:8080 -p 9990:9990 jbossdemocentral/bpms-baggage-delivery-demo
-	```
-6. Login to http://&lt;DOCKER_HOST&gt;:8080/business-central (u:erics / p:bpmsuite1!)
-
-7. Enjoy demo!
-
-Additional information can be found in the jbossdemocentral docker [developer repository](https://github.com/jbossdemocentral/docker-developer)
-
-
 Running the demo
 ----------------
 Build the project then kick off the process. An initial form will show for first name, last name, 
@@ -101,24 +73,6 @@ You are then shown the route the process took and the variables to confirm shipp
 
 See support directory for included spreadsheet decision table ( NonUSShippingCost.xls) and docs directory for 
 an overview presentation of the project.
-
-
-Supporting Articles
--------------------
-[JBoss BPM Baggage Delivery is Helping Travelers with Lost Bags](http://www.schabell.org/2015/03/jboss-bpmsuite-helping-travelers-with-lost-bags.html)
-
-
-Released versions
------------------
-See the tagged releases for the following versions of the product:
-
-- v1.2 - JBoss BPM Suite 6.1 and baggage delivery demo installed.
-
-- v1.1 - JBoss BPM Suite 6.0.3 and baggage delivery demo installed with optional generation of containerized installation.
-
-- v1.0 - JBoss BPM Suite 6.0.3 and baggage delivery demo installed.
-
-![Digital Sign](https://github.com/jbossdemocentral/bpms-baggage-delivery-demo/blob/master/docs/demo-images/digi-sign.jpg?raw=true)
 
 ![Baggage Process](https://github.com/jbossdemocentral/bpms-baggage-delivery-demo/blob/master/docs/demo-images/baggage-process.png?raw=true)
 
